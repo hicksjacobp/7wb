@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>210</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Board
+--
+-resource: Resource
+-wonderStages: List&lt;WonderStage&gt;
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>300</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+-cardType: CardType
+-cardCost: Collection&lt;ConstructionCost&gt;
+-effect: Effect
+-minimumPlayers: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>60</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>RawMaterial
+--
+_+STONE_
+_+CLAY_
+_+ORE_
+_+WOOD_
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>180</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ManufacturedGood
+--
+_+PAPYRUS_
+_+TEXTILE_
+_+GLASS_
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>220</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+CardType
+--
+_+RAW_MATERIAL_
+_+MANUFACTURED_GOOD_
+_+CIVILIAN_STRUCTURE_
+_+SCIENTIFIC_STRUCTURE_
+_+COMMERCIAL_STRUCTURE_
+_+MILITARY_STRUCTURE_
+_+GUILD_
+--
+/+getColor(): Color/
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>10</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/ConstructionCost/
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>60</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ResourceCost
+--
+-resources: Collection&lt;Resource&gt;
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>10</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/Resource/
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>10</y>
+      <w>70</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;190;50;190</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>10</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>10</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>130</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CoinCost
+--
+-value: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>10</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;140;50;140</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>200</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>BuildingCost
+--
+-card: Card
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>10</y>
+      <w>70</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;200;50;200</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>420</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>WonderStage
+--
+-cost: ConstructionCost
+-effect: Effect
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>10</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/Effect/
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>510</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Direction
+--
+_+CLOCKWISE_
+_+COUNTER_CLOCKWISE_
+_+NONE_
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>630</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Age
+--
+-name: String
+-rotationDirection: Direction
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>60</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ResourceEffect
+--
+-resource: Resource
+-number: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>500</y>
+      <w>240</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>TradingEffect
+--
+- resources: Collection&lt;Resource&gt;
+- coinValue: int
+- direction: Direction
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>430</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>MilitaryShieldEffect
+--
+-value: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>290</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CardTypeVictoryPointEffect
+--
+-cardType: CardType
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>360</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WonderStageVictoryPointEffect
+--
+-direction: Direction
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>220</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>VictoryPointEffect
+--
+-value: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>600</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CoinEffect
+--
+-value: int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>810</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/ScienceEffect/
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>150</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>SingleEffect
+--
+-effects: Collection&lt;Effect&gt;
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>860</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>EducationEffect
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>910</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>MedicalEffect
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>960</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>EngineeringEffect
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>810</y>
+      <w>70</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;170;50;170</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>810</y>
+      <w>70</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;120;50;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>810</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>240</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>240</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;140;50;140</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>90</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;160;70;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;230;50;230</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;440;50;440</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;510;50;510</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;610;50;610</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>10</y>
+      <w>70</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;820;50;820</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1090</x>
+      <y>10</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>100</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>VictoryPointScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>170</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>MilitaryCombatScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>240</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CoinScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>320</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ScienceScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>720</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+-players: LinkedList&lt;Player&gt;
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>790</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-name: String
+-cardPlay: List&lt;CardPlay&gt;
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>880</y>
+      <w>80</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CardPlay
+--
+-card: Card
+-turn: Turn
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>970</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Turn
+--
+-turnNumber: int
+-age: Age
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>390</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>NeighborMilitaryCombatScoreStrategy
+--
++score(Game, Player): int
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>670</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CardTypeCoinEffect
+--
+-cardType: CardType
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>740</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WonderStageCoinEffect
+--
+-direction: Direction
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>620</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>620</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;140;50;140</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1080</x>
+      <y>50</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;70;50;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1080</x>
+      <y>50</y>
+      <w>70</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;140;50;140</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1080</x>
+      <y>50</y>
+      <w>70</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;210;50;210</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1080</x>
+      <y>50</y>
+      <w>70</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;290;50;290</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1080</x>
+      <y>50</y>
+      <w>70</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;360;50;360</additional_attributes>
+  </element>
+</diagram>
